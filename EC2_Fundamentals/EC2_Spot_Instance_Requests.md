@@ -11,3 +11,16 @@ Other strategy: Spot Block
 
 Used for batch jobs, data analysis, or workloads that are resilient to failures
 Not great for critical jobs or databases
+
+Spot Fleets
+    Spot Fleets = set of spot instances + (optional) on-demand instances
+    The Spot Fleet will try to meet the target capacity with price constraints
+        define possible launch pools:instance type (m5.large), OS, Availability Zone
+        Can have multiple launch pools, so that the fleet can choose
+        Spot Fleet stops launching instances when reaching capacity or max cost
+    Strategies to allocate spot instances:
+        lowestPrice: from the pool with the lowest price( cost optimization, short workload)
+        diversified: distributed across all pools ( great for availability, long workloads)
+        capacityOptimized: pool with the optimal capacity for the number of instances
+        priceCapacityOptimized (recommended): pools with highest capacity available, then select the pool with the lowest price
+        best choice for most workloads
