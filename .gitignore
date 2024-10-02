@@ -1,2 +1,8 @@
 .history
 .lh
+.gitignore
+EC2_Fundamentals/.terraform.lock.hcl
+EC2_Fundamentals/.terraform
+EC2_Fundamentals/terraform.tfstate
+
+
