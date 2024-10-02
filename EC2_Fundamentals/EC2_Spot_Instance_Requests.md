@@ -23,4 +23,5 @@ Spot Fleets
         diversified: distributed across all pools ( great for availability, long workloads)
         capacityOptimized: pool with the optimal capacity for the number of instances
         priceCapacityOptimized (recommended): pools with highest capacity available, then select the pool with the lowest price
-        best choice for most workloads
+        best choice for most workload
+Spot Fleets allow us to automatically request Spot instances with the lowest price
