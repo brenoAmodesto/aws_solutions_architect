@@ -24,4 +24,6 @@ EC2 Hibernate
         Instance RAM Size - must be less than 150 gb
         Instance Size - not supported for bare metal instances
         AMI - Amazon Linux 2, Linux AMI, Ubuntu, RHEL, CentOS & Windows
+        C2 Hibernate, the EC2 Instance Root Volume type must be an EBS volume and must be encrypted to ensure the protection of sensitive content.
 
+    
