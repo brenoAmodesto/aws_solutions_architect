@@ -6,3 +6,4 @@ EBS Multi-Attach - io1/io2 family:
         - Applications must manage concurrent write operations
     - Up to 16 EC2 instances at a time (remeber this for the exam)
     - Must use a file system that's clster-aware (not XFS, EXT4, etc....)
+    

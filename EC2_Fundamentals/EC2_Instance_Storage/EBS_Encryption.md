@@ -13,3 +13,8 @@ EBS Encryption:
         - Encrypt the EBS snpashot (using copy)
         - Create new ebs volume from the snapshot ( the volume will also be encrypted )
         - Now you can attach the encrypted volume to the original instance
+
+Steps to encrypt: 
+    - Create an EBS snapshot of your EBS volume.
+    - Copy the snapshot and tick the option to encrypt the copied snapshot 
+    - Then, use the encrypted snapshot to create a new EBS volume
