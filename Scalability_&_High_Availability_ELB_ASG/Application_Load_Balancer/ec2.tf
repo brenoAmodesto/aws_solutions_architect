@@ -1,11 +1,13 @@
-resource "aws_instance" "ec2-demo" {
-  ami             = data.aws_ami.amzlinux2.id
-  instance_type   = "t2.micro"  # Tipo de instância
-  subnet_id       = data.aws_subnet.default.id  # Usar a primeira sub-rede default
-  key_name        = "ec2-demo"
-  count = 2
-  user_data = file("${path.module}/app.sh")
-  tags = {
-    Name = "ec2-demo"
-  }
+module "ec2_instance" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+  ami = data.aws_ami.amzlinux2.id
+
+  for_each = toset(["one", "two"])
+
+  name = "instance-${each.key}"
+
+  instance_type          = "t2.micro"
+  vpc_security_group_ids = [module.ec2_sg.id]
+  subnet_id              = module.vpc.public_subnets
+
 }

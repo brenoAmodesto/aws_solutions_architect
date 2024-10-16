@@ -5,7 +5,7 @@ module "ec2_sg" {
 
   name = "ec2_sg"
   description = "Security Group with SSH port open for everybody (IPv4 CIDR), egress ports are all world open"
-  vpc_id = data.aws_vpc.default.id
+  vpc_id = module.vpc.id
   # Ingress Rules & CIDR Blocks
   ingress_rules = ["ssh-tcp"]
   ingress_cidr_blocks = ["0.0.0.0/0"]
