@@ -27,5 +27,5 @@ Target Groups:
 Good to Know:
     - Fixed hostname (xxx.region.elb.amazonaws.com)
     - The application servers don't see the IP of the client directly
-        - The true IP of the lient is inserted in the header X-Forwarded-For
+        - The true IP of the client is inserted in the header X-Forwarded-For
         - We can also get Port (X-Forwarded-Port) and proto (X-Forwarded-Proto)
