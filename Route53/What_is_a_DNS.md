@@ -35,5 +35,3 @@
 - Route 53 supports the following DNS record types:
     -(must know) A / AAAA / CNAME / NS
     - (advanced) CAA / DS / MX / NAPTR/ PTR /SOA /TXT /SPF /SRV
-
-
